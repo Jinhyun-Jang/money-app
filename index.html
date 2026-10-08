@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>금전관리 자동화 시스템</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #0f172a;
+  }
+  iframe {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  #fallback {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: -apple-system, "Pretendard", "Malgun Gothic", sans-serif;
+    color: #e2e8f0;
+    background: #0f172a;
+    text-align: center;
+    padding: 24px;
+  }
+  #fallback a { color: #60a5fa; margin-top: 12px; font-size: 16px; }
+</style>
+</head>
+<body>
+  <iframe
+    id="appFrame"
+    src="https://script.google.com/a/macros/light4u.kr/s/AKfycbxbPYF4PhjFeqX6OYEZ_1qsnBT1BRvw-Kf8_ruzaN6FE2OjXJvNBHDwxkmEsq3sEidd_Q/exec"
+    title="금전관리 자동화 시스템"
+    allow="clipboard-write"
+  ></iframe>
+  <div id="fallback">
+    <p>화면이 보이지 않으면, light4u.kr 계정으로 로그인되어 있는지 확인하시거나<br>아래 주소로 직접 접속해주세요.</p>
+    <a href="https://script.google.com/a/macros/light4u.kr/s/AKfycbxbPYF4PhjFeqX6OYEZ_1qsnBT1BRvw-Kf8_ruzaN6FE2OjXJvNBHDwxkmEsq3sEidd_Q/exec" target="_top">직접 접속하기</a>
+  </div>
+  <script>
+    setTimeout(function () {
+      try {
+        var frame = document.getElementById('appFrame');
+        if (!frame.contentWindow) {
+          document.getElementById('fallback').style.display = 'flex';
+        }
+      } catch (e) {
+        document.getElementById('fallback').style.display = 'flex';
+      }
+    }, 6000);
+  </script>
+</body>
+</html>
